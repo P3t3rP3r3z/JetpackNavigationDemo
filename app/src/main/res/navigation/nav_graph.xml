@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigationTargetAlphaFragment">
+
+    <fragment
+        android:id="@+id/navigationTargetAlphaFragment"
+        android:name="com.p3t3rp3r3z.jetpacknavigationdemo.ui.fragments.NavigationTargetAlphaFragment"
+        android:label="navigation_target_alpha_fragment"
+        tools:layout="@layout/navigation_target_alpha_fragment" >
+        <action
+            android:id="@+id/action_navigationTargetAlphaFragment_to_navigationTargetBetaFragment"
+            app:destination="@id/navigationTargetBetaFragment" />
+        <action
+            android:id="@+id/action_navigationTargetAlphaFragment_to_navigationTargetGammaFragment"
+            app:destination="@id/navigationTargetGammaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationTargetBetaFragment"
+        android:name="com.p3t3rp3r3z.jetpacknavigationdemo.ui.fragments.NavigationTargetBetaFragment"
+        android:label="navigation_target_beta_fragment"
+        tools:layout="@layout/navigation_target_beta_fragment" />
+
+    <fragment
+        android:id="@+id/navigationTargetGammaFragment"
+        android:name="com.p3t3rp3r3z.jetpacknavigationdemo.ui.fragments.NavigationTargetGammaFragment"
+        android:label="navigation_target_gamma_fragment"
+        tools:layout="@layout/navigation_target_gamma_fragment" />
+
+    <action android:id="@+id/action_global_navigationTargetAlphaFragment2"
+        app:destination="@id/navigationTargetAlphaFragment"/>
+
+</navigation>
